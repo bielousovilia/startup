@@ -1,0 +1,121 @@
+//основные стили по умолчанию
+@import '_vars';
+@import 'keyframes';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+body {
+    font: {
+        family: $mont, sans-serif;
+        size: $ms;
+    }
+
+    line-height: 24px;
+    color: #555555;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100%;
+
+    .container {
+        //max-width: 100%;
+        margin: 0px auto;
+        padding: 0px 30px;
+
+        @media (min-width: $xl) {
+            width: 1140px;
+        }
+
+        @media (max-width: $md) {
+            //@warn: $md;
+            padding: 0px 10px;
+        }
+    }
+
+    .content {
+        flex: 1 0 auto;
+    }
+
+    .footer {
+        flex: 0 0 auto;
+    }
+}
+
+.section_style {
+    position: relative;
+
+    &.active {
+        z-index: -1;
+    }
+}
+
+.show {
+    display: '';
+}
+
+.hide {
+    display: none;
+}
+
+.arrow {
+    position: fixed;
+    opacity: 0;
+    bottom: 70px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 10;
+
+    &:after {
+        content: '';
+        position: absolute;
+        border: solid #ac1e0c;
+        top: 0px;
+        left: 10px;
+        border-width: 0 10px 10px 0;
+        padding: 10px;
+        transform: rotate(-135deg);
+    }
+
+    &_style {
+        display: block;
+        position: absolute;
+        left: -10px;
+        bottom: 12px;
+        width: 50px;
+        height: 50px;
+    }
+
+    @media (max-width: $sm) {
+        bottom: 20px;
+    }
+}
+
+//конец основным стилям по умолчанию
+
+@import 'header';
+@import 'services';
+@import 'about-us';
+@import 'latest-works';
+@import 'talk';
+@import 'blog';
+@import 'form';
+@import 'sliders';
+@import 'footer';

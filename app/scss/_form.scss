@@ -1,0 +1,144 @@
+.form {
+
+  box-sizing: border-box;
+
+  &__text {
+    @extend .services__text;
+  }
+
+  &__title {
+    text-align: center;
+    @extend .services__title;
+  }
+
+  &__sign {
+    text-align: center;
+    @extend .services__sign;
+  }
+
+  &__inner {
+    display: flex;
+    
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  &__inputs {
+    width: 70%;
+    padding-bottom: 100px;
+  }
+
+  input {
+    width: 50%;
+    @media (max-width: 680px) {
+      width: 100%;
+    }
+    margin-bottom: 20px;
+    padding: 12px;
+    border-color: #555;
+    border-width: 1px;
+
+    &:focus, &:hover {
+      border: 1px solid #c0301c;
+    }
+
+  }
+
+  &__inputs-inner {
+    display: flex;
+    width: 100%;
+
+    &:last-child {
+      flex-direction: column;
+    }
+
+    @media (max-width: 680px) {
+      flex-direction: column;
+    }
+  }
+
+  &__name {
+    margin-right: 20px;
+  }
+
+  &__email {
+  }
+
+  &__subject {
+    margin-right: 20px;
+  }
+
+  &__msg {
+    height: 105px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-color: #555;
+    border-width: 1px;
+    resize: none;
+
+    &:focus, &:hover {
+      border: 1px solid #c0301c;
+    }
+  }
+
+  &__btn {
+    width: 170px !important;
+    background-color: transparent;
+    border-color: #555;
+    border-width: 1px;
+    outline: none;
+  }
+}
+
+.contacts {
+
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $md) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  width: 30%;
+
+  &__block {
+    display: flex;
+    margin-bottom: 35px;
+
+    @media (max-width: $md) {
+        display: none;
+    }
+    
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__icon {
+    margin-right: 15px;
+    font-size: 24px;
+  }
+
+  &__text {
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  &__content {
+    font-size: 12px;
+    font-family: $robo;
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+}

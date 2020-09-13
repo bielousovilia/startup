@@ -1,0 +1,147 @@
+.z-index {
+  z-index: -1 !important;
+}
+
+.latest-works {
+
+  &__text {
+    @extend .services__text;
+    padding-top: 25px !important;
+    text-align: center;
+
+  }
+
+  &__title {
+    @extend .services__title;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    margin-right: 25px;
+    padding: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+    
+    @media (max-width: $md) {
+      margin-right: 0px;
+    }
+
+    &:hover {
+      color: #c0301c;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 75px;
+      padding: 0px 25px;
+    }
+
+    @media (min-width: $xl) {
+      max-width: 1080px;
+      margin: 0px auto;
+      margin-bottom: 100px;
+    }
+
+  }
+
+  &__block {
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $md) {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      @media (max-width: $sm) {
+        margin-bottom: 0px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+    }
+
+    &:hover:before {
+      background-color: #c0301c;
+      opacity: 0.7;
+    }
+
+    &:hover .latest-works__sign {
+      opacity: 1;
+    }
+
+  }
+
+  &__sign {
+    position: absolute;
+    opacity: 0;
+    top: 31%;
+    left: 35%;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s;
+
+    @media (max-width: $sm) {
+        top: 27%;
+        left: 32%;
+    }
+  }
+
+  &__name {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 25px;
+
+    &:after {
+      content: 'Branding';
+      padding-top: 16px;
+      display: block;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 15px 20px;
+    font-family: $robo;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+    background-color: #fff;
+    color: #c0301c;
+  }
+
+  &__arrow {
+    display: inline-block;
+    border: solid #c0301c;
+    border-width: 0px 4px 4px 0px;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+
+}

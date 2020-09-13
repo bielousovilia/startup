@@ -1,0 +1,28 @@
+.footer {
+  text-align: center;
+  background-color: #c0301c;
+  color: #fff;
+
+  &__text {
+    @extend .services__text;
+  }
+
+  &__title {
+    @extend .services__title;
+    &:after {
+      border-color: #fff;
+    }
+  }
+
+  &__sign {
+    @extend .services__sign;
+    margin-bottom: 0px;
+    padding-bottom: 70px;
+  }
+
+  .icons {
+    &__list {
+      justify-content: center;
+    }
+  }
+}

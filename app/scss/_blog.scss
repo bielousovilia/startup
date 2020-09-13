@@ -1,0 +1,133 @@
+.blog {
+
+  text-align: center;
+
+  &__text {
+    @extend .services__text;
+  }
+
+  &__title {
+    @extend .services__title;
+  }
+
+  &__sign {
+    @extend .services__sign;
+  }
+}
+
+.articles {
+
+  &__line {
+    margin: 35px 0px;
+    background-color: #dddddd;;
+    color: transparent;
+  }
+
+}
+
+.article {
+
+  display: flex;
+  @media (max-width: $lg) {
+      flex-wrap: wrap;
+  }
+
+  &__image {
+    margin-right: 40px;
+
+    @media (max-width: $lg) {
+      margin: 0px auto 25px;
+    }
+    
+    img {
+      @media (max-width: $sm) {
+        max-width: 100%;
+      }
+    }
+    
+  }
+
+  &__content {
+    text-align: justify;
+  }
+
+  &__inner-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__date {
+    margin-right: 25px;
+    padding: 8px 12px;
+    border: 2px solid #555;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__num {
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    @media (max-width: $sm) {
+        font-size: 16px;
+    }
+  }
+
+  &__month {
+    letter-spacing: 1.4px;
+
+    @media (max-width: $sm) {
+        font-size: 12px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+
+  }
+
+  &__name {
+    margin-bottom: 20px;
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+    }
+  }
+
+  &__sign {
+    font-style: italic;
+    font-size: 13px;
+
+    @media (max-width: $sm) {
+      font-size: 11px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    font-family: $robo;
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+    }
+  }
+
+  &__link {
+    font-family: $robo;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.3px;
+    color: #777;
+  }
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
