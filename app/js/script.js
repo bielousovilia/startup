@@ -105,7 +105,7 @@ $(document).ready(function () {
   });
 
   //! SLICK SLIDERS
-  $('.slider__up').slick({
+  $('.sliders__up').slick({
     arrows: false,
     infinite: true,
     autoplaySpeed: 1500,
